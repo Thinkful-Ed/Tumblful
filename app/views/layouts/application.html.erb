@@ -11,6 +11,20 @@
   <a class="nav-logo-link page-title" href="/">
     <h1 class='pull-left'>Tumblful</h1>
   </a>
+  <br>
+  <nav>
+      <br><br>
+    <ul>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "All Image Links", image_links_path %></li>
+        <li><%= link_to "All Text Posts", text_posts_path %></li>
+        <li><%= link_to "All Article Link", article_links_path %></li>
+
+        
+  </ul>
+</nav>
+  
+   
   <%= button_to("Sign out", destroy_user_session_path, :method => :delete, :class => "pull-right") if user_signed_in? %>
 </nav>
 <%= notices %>

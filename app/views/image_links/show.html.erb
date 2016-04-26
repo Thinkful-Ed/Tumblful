@@ -1,0 +1,4 @@
+<h1><%= @image_link.title %></h1>
+<p><%= image_tag @image_link.url, :class => "image-link-image thumbnail" %></p>
+<p><%= link_to "Edit", edit_image_link_path(@image_link) %></p>
+<%= link_to "Back", image_links_path %>

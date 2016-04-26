@@ -1,0 +1,6 @@
+
+<% @image_links.each do |image_link| %>
+  <%= content_tag :h1, image_link.title %>
+  <%= content_tag :p, image_link.url %>
+  <%= link_to "Show", image_link_path(image_link) %> |
+<% end %>

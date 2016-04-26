@@ -1,0 +1,7 @@
+
+<% @text_posts.each do |text_post| %>
+  <%= content_tag :h1, text_post.title %>
+  <%= content_tag :p, truncate(text_post.content, length: 140, separator: ' ') %>
+  <%= link_to "Show", text_post_path(text_post) %> |
+<% end %>
+

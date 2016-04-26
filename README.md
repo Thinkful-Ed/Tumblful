@@ -1,6 +1,23 @@
 Tumblful
 =============
-This is the sample version of Tumblful, an extension of Tweetful for creating different types of posts, produced for Thinkful's "Essentials of Full Stack Development" course.
+This is my fork of Tumblful which was created as part of the Thinkful course "Essentials of Full Stack Development in Rails."
+Tumblful is a micro-blogging app in the style of Tumblr. It was created based on the codebase of Tweetful which is another app in the course.
+
+As part of the course curriculum I learned how to:
+
+1. Create models
+    * Models created are:
+        * ImageLink
+        * TestPost
+        * ArticleLink
+
+2. Create scopes
+    * Created a scope for ArticleLink which allows the user to see the 10 most recent instances in reverse chronological order and validates that the user has input a url to avoid generating exceptions.
+
+3. Create Controllers
+    *Controllers created are:
+        *ImageLinksController
+        *TextPostsController
 
 Before Beginning
 -------------
@@ -56,5 +73,7 @@ Authors
 -------
 
 **Scott Robinson**
-
 - http://github.com/SnareChops
+- 
+**Forrest Phillips**
+- https://github.com/FPhillips27
