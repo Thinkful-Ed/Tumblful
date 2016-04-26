@@ -15,9 +15,10 @@ As part of the course curriculum I learned how to:
     * Created a scope for ArticleLink which allows the user to see the 10 most recent instances in reverse chronological order and validates that the user has input a url to avoid generating exceptions.
 
 3. Create Controllers
-    *Controllers created are:
-        *ImageLinksController
-        *TextPostsController
+    * Controllers created are:
+        * ImageLinksController
+        * TextPostsController
+        * ArticleLinksController
 
 Before Beginning
 -------------
