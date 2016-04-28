@@ -1,23 +1,23 @@
 class TextPostsController < ApplicationController
         #GET
     def index
-        @text_posts = TextPosts.all
+        @text_posts = TextPost.all
     end
         #GET
     def show
-        @text_post = TextPosts.find(params[:id])
+        @text_post = TextPost.find(params[:id])
     end
         #GET
     def new
-        @text_post = TextPosts.new
+        @text_post = TextPost.new
     end
         #GET
     def edit
-        @text_post = TextPosts.find(params[:id])
+        @text_post = TextPost.find(params[:id])
     end
         #POST
     def create
-        @text_post = TextPosts.new(content: params[:text_posts][:content], title: params[:text_posts][:title])
+        @text_post = TextPost.new(content: params[:text_post][:content], title: params[:text_post][:title])
         if @text_post.save
             redirect_to text_posts_path
         else
@@ -27,8 +27,8 @@ class TextPostsController < ApplicationController
     end
         #PUT
     def update
-        @text_post = TextPosts.find(params[:id])
-        if @text_post.update(content: params[:text_posts][:content], title: params[:text_posts][:title])
+        @text_post = TextPost.find(params[:id])
+        if @text_post.update(content: params[:text_post][:content], title: params[:text_post][:title])
             redirect_to text_posts_path
         else
             @errors = @text_post.errors

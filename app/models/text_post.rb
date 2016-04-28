@@ -1,4 +1,4 @@
-class TextPosts < ActiveRecord::Base
+class TextPost < ActiveRecord::Base
     scope :recent, lambda { order('created_at DESC').limit(5) }
 
     validates_presence_of :content

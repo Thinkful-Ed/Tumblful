@@ -19,6 +19,8 @@ As part of the course curriculum I learned how to:
         *ImageLinksController
         *TextPostsController
 
+Special thanks to the Thinkful community for helping me debug my code when I ran into issues.
+
 Before Beginning
 -------------
 
