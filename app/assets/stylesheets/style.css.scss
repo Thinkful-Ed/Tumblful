@@ -1,7 +1,7 @@
 body {
   background-attachment: scroll;
   background-clip: border-box;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #3A4C78;
   background-origin: padding-box;
   background-size: auto;
   color: rgb(51, 51, 51);
@@ -25,7 +25,7 @@ body {
 }
 
 nav {
-  background-image: image-url('twitter_web_sprite_bgs.png');
+  background-color:#CCC;
   background-repeat: repeat-x;
   min-height: 40px !important;
 }
@@ -37,6 +37,8 @@ nav {
 
 .main-content {
   margin: 5px;
+  background-color:#FFF;
+  padding: 15px;
 }
 
 a.page-title,
@@ -195,4 +197,16 @@ table.stats td:first-child {
 
 .pull-left {
   float: left;
+}
+
+ul {
+  list-style: none;
+}
+
+.button {
+  color:white;
+  background-color: #000;
+  padding: 1em;
+  text-decoration: none;
+  border-radius: 15px;
 }
