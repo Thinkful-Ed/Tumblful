@@ -22,6 +22,7 @@ body {
   padding-top: 0px;
   unicode-bidi: embed;
   width: 100%;
+  overflow-x: hidden;
 }
 
 nav {
@@ -39,8 +40,10 @@ nav {
 .main-content {
   margin: auto;
   background-color:#FFF;
-  padding: 15px;
-  width:70%;
+  padding: 5em;
+  padding-top: 8em;
+  padding-bottom: 8em;
+  width:60%;
   box-shadow: .2em .2em 0 #EEE, .4em .4em 0 #CCC, .6em .6em 0 #AAA ;
 }
 
@@ -212,6 +215,7 @@ ul {
   padding: 1em;
   text-decoration: none;
   border-radius: 15px;
+  transition: all .8s ease 0s;
 }
 
 .button:hover {
@@ -228,6 +232,7 @@ ul {
   padding: .5em;
   text-decoration: none;
   border-radius: 15px;
+  transition: all .8s ease 0s;
 }
 
 .button-small:hover {
@@ -254,12 +259,13 @@ ul {
   background: #738AC4;
   color:#FFF;
   padding: 1em;
-  margin-top: 10.8em;
+  margin-top: 8.5em;
 }
 
 .tumblful-heart {
   color: #FF7878;
   font-size:1.5em;
+  transition: all 0.3s ease 0s;
 }
 
 .tumblful-heart:hover {
@@ -268,6 +274,5 @@ ul {
 }
 
 #wrapper {
-   min-height:100%;
    position:relative;
 }

@@ -2,6 +2,6 @@
 
 <% @image_links.each do |image_link| %>
   <%= content_tag :h1, image_link.title %>
-  <%= image_tag image_link.url,  :width => "250" %><br>
+  <%= image_tag image_link.url,  :width => "250" %><br><br>
   <%= link_to "Show", image_link_path(image_link), class: 'button-small' %>
 <% end %>
