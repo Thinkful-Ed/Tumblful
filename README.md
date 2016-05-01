@@ -20,6 +20,16 @@ As part of the course curriculum I learned how to:
         * TextPostsController
         * ArticleLinksController
 
+I also reworked a lot of the Tumblful CSS, as you can see in the screenshots below.
+
+Initial Version of Tumblful
+
+![Screenshot of the initial version of Tumblful](app/assets/images/InitialTumblful.png?raw=true "Initial version of Tumblful")
+
+My fork of Tumblful
+
+![Screenshot of my fork of Tumblful](app/assets/images/ForkedTumblful.png?raw=true "My fork of Tumblful")
+
 Special thanks to the Thinkful community for helping me debug my code when I ran into issues.
 
 Before Beginning
@@ -77,6 +87,6 @@ Authors
 
 **Scott Robinson**
 - http://github.com/SnareChops
-- 
+ 
 **Forrest Phillips**
 - https://github.com/FPhillips27
