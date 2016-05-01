@@ -8,20 +8,22 @@
 </head>
 <body>
 <nav>
-  <a class="nav-logo-link page-title" href="/">
-    <h1 class='pull-left'>Tumblful</h1>
-  </a>
+  <div class="nav-logo-link page-title">
+    <center><h1 class="tumblful-header">
+      <%= image_tag "tumblful.png", :size => "250x62" %>
+    </h1></center>
+  </div>
   <br>
   <nav>
       <br><br>
-    <ul>
+      <ul class="navbar-buttons">
+        <br><br><br>
         <%= link_to "Home", root_path, class: 'button'  %>
         <%= link_to "All Image Links", image_links_path, class: 'button' %>
         <%= link_to "All Text Posts", text_posts_path, class: 'button'  %>
         <%= link_to "All Article Links", article_links_path, class: 'button'  %>
-
-        
-  </ul>
+        <br><br>
+      </ul>
 </nav>
   
    
@@ -31,5 +33,10 @@
 <div class='main-content'>
   <%= yield %>
 </div>
+<br>
+<br>
+<footer id="tumblful-footer">
+  <center>Thank you for using Tumblful.</center>
+</footer>
 </body>
 </html>

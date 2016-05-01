@@ -1,4 +1,4 @@
 <h1><%= @article_link.title %></h1>
 <p><%= link_to @article_link.url, :class => "image-link-image thumbnail" %></p>
-<p><%= link_to "Edit", edit_article_link_path(@article_link) %></p>
-<%= link_to "Back", article_links_path %>
+<p><%= link_to "Edit", edit_article_link_path(@article_link), class: 'button-small'%>
+<%= link_to "Back", article_links_path, class: 'button-small' %></p>

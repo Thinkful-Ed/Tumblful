@@ -25,7 +25,7 @@ body {
 }
 
 nav {
-  background-color:#CCC;
+  background-color:#212C45;
   background-repeat: repeat-x;
   min-height: 40px !important;
 }
@@ -36,9 +36,10 @@ nav {
 }
 
 .main-content {
-  margin: 5px;
+  margin: auto;
   background-color:#FFF;
   padding: 15px;
+  width:70%;
 }
 
 a.page-title,
@@ -205,8 +206,49 @@ ul {
 
 .button {
   color:white;
-  background-color: #000;
+  background-color: #738AC4;
   padding: 1em;
   text-decoration: none;
   border-radius: 15px;
+}
+
+.button:hover {
+  background-color: #4B6FC4;
+}
+
+.button:active {
+  background-color: #37508F;
+}
+
+.button-small {
+  color:white;
+  background-color: #FFCA48;
+  padding: .5em;
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+.button-small:hover {
+  background-color: #D6A93D;
+}
+
+.button-small:active {
+  background-color: #78663A;
+}
+
+.tumblful-header{
+  text-decoration: none;
+  color: #FFF;
+  padding-top: 2em;
+}
+
+.navbar-buttons {
+  margin-left: 33%;
+}
+
+#tumblful-footer {
+  background: #738AC4;
+  color:#FFF;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }

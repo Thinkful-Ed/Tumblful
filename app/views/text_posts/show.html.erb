@@ -1,4 +1,4 @@
 <h1><%= @text_post.title %></h1>
 <p><%= @text_post.content %></p>
-<p><%= link_to "Edit", edit_text_post_path(@text_post) %></p>
-<%= link_to "Back", text_posts_path %>
+<p><%= link_to "Edit", edit_text_post_path(@text_post), class: 'button-small' %>
+<%= link_to "Back", text_posts_path, class: 'button-small' %>
