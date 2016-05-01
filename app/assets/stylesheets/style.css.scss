@@ -31,8 +31,9 @@ nav {
 }
 
 .nav-logo-link {
-  height: 12px;
-  padding: 10px 14px 18px;
+  height: 1em;
+  padding: 1em 2em 1em;
+  margin-top:-2.5em;
 }
 
 .main-content {
@@ -40,6 +41,7 @@ nav {
   background-color:#FFF;
   padding: 15px;
   width:70%;
+  box-shadow: .2em .2em 0 #EEE, .4em .4em 0 #CCC, .6em .6em 0 #AAA ;
 }
 
 a.page-title,
@@ -239,7 +241,7 @@ ul {
 .tumblful-header{
   text-decoration: none;
   color: #FFF;
-  padding-top: 2em;
+  padding-top: 1.5em;
 }
 
 .navbar-buttons {
@@ -252,12 +254,17 @@ ul {
   background: #738AC4;
   color:#FFF;
   padding: 1em;
-  margin-top: 8.3em;
+  margin-top: 10.8em;
 }
 
 .tumblful-heart {
   color: #FF7878;
   font-size:1.5em;
+}
+
+.tumblful-heart:hover {
+    color: #FFF;
+    text-shadow: 0 0 5px rgb(255,255,255) , 0 0 10px rgb(255,255,255) , 0 0 15px rgb(255,255,255) , 0 0 20px rgb(255,17,119) , 0 0 35px rgb(255,17,119) , 0 0 40px rgb(255,17,119) , 0 0 50px rgb(255,17,119) , 0 0 75px rgb(255,17,119) ;
 }
 
 #wrapper {
