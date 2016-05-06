@@ -4,4 +4,11 @@
   <%= content_tag :h1, image_link.title %>
   <%= image_tag image_link.url,  :width => "250" %><br><br>
   <%= link_to "Show", image_link_path(image_link), class: 'button-small' %>
+  <%= form_for Like.new do |f| %>
+    <%= f.hidden_field :likeable_type, :value => image_link.class %>
+    <%= f.hidden_field :likeable_id, :value => image_link.id %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.submit "&#x2665;".html_safe, class:'like-button' %>
+    <%= image_link.likes.count %> likes
+  <% end %>
 <% end %>

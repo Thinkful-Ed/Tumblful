@@ -227,12 +227,14 @@ ul {
 }
 
 .button-small {
-  color:white;
+  color:#FFF;
   background-color: #FFCA48;
   padding: .5em;
   text-decoration: none;
   border-radius: 15px;
   transition: all .8s ease 0s;
+  border: 0;
+  outline: 0;
 }
 
 .button-small:hover {
@@ -240,7 +242,8 @@ ul {
 }
 
 .button-small:active {
-  background-color: #78663A;
+  background-color: #3D341E;
+    outline: 0;
 }
 
 .tumblful-header{
@@ -265,7 +268,7 @@ ul {
 .tumblful-heart {
   color: #FF7878;
   font-size:1.5em;
-  transition: all 0.3s ease 0s;
+  transition: all 0.8s ease 0s;
 }
 
 .tumblful-heart:hover {
@@ -275,4 +278,32 @@ ul {
 
 #wrapper {
    position:relative;
+}
+
+.like-button {
+    color: #FFF;
+    font-size: 1.2em;
+    background: #FF7878;
+    border: none;
+    padding: .2em;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all .5s ease 0s;
+    width: 1.5em;
+  cursor: pointer;
+  margin-top: .7em;
+  margin-left: .2em;
+  outline: 0;
+  margin-bottom: 1em;
+
+}
+
+.like-button:hover {
+  color: #FF7878;
+  background: #FFF;
+}
+
+.like-button:active {
+  color: #FFF;
+  background: #FF7878;
 }

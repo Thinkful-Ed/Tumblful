@@ -7,4 +7,6 @@ class TextPost < ActiveRecord::Base
         #Ensures that user has to enter title
     belongs_to :user
         #Says that this class belongs to user
+    has_many :likes, as: :likeable
+      # Set up this side of the polymorphic association
 end
