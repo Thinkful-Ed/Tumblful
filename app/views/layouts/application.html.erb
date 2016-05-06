@@ -16,8 +16,8 @@
       <%= image_tag "tumblful.png", :size => "250x62" %>
     </h1></center>
   </div>
-  <br>
   <nav>
+      <%= link_to("Sign Out", destroy_user_session_path, :method => :delete, :class => "button-signout") if user_signed_in? %>
       <br><br>
       <ul class="navbar-buttons">
         <br><br><br>
@@ -28,9 +28,6 @@
         <br><br>
       </ul>
 </nav>
-  
-   
-  <%= button_to("Sign out", destroy_user_session_path, :method => :delete, :class => "pull-right") if user_signed_in? %>
 </nav>
 <%= notices %>
 <div class='main-content'>
