@@ -28,7 +28,7 @@ Initial Version of Tumblful
 
 My fork of Tumblful
 
-![Screenshot of my fork of Tumblful](app/assets/images/ForkedTumblful2.png?raw=true "My fork of Tumblful")
+![Screenshot of my fork of Tumblful](app/assets/images/ForkedTumblful3.png?raw=true "My fork of Tumblful")
 
 Special thanks to the Thinkful community for helping me debug my code when I ran into issues.
 
