@@ -28,17 +28,17 @@ class ImageLinksController < ApplicationController
     def update
         @image_link = ImageLink.find(params[:id])
         if @image_link.update(url: params[:image_link][:url], title: params[:image_link][:title])
-            redirect_to image_links_path
+            redirect_to image_links_path, :notice => "Your Image Link has been saved."
         else
             @errors = @image_link.errors
             render :edit
         end
     end
     
-    def delete
+    def destroy
         @image_link = ImageLink.find(params[:id])
         @image_link.destroy
-        redirect_to image_links_path
+        redirect_to image_links_path,  :notice => "Your Image Link has been deleted."
     end
 end
 

@@ -2,14 +2,15 @@
 
 <% @text_posts.each do |text_post| %>
   <%= content_tag :h1, text_post.title %>
-  <%= content_tag :p, truncate(text_post.content, length: 140, separator: ' ') %> 
-  <%= link_to "Read More", text_post_path(text_post), class: 'button-small' %>
+  <%= content_tag :p, truncate(text_post.content, length: 300, separator: ' ') %> 
   <%= form_for Like.new do |f| %>
+    <%= link_to "pageview", text_post_path(text_post), class: 'edit-button material-icons' %>
     <%= f.hidden_field :likeable_type, :value => text_post.class %>
     <%= f.hidden_field :likeable_id, :value => text_post.id %>
     <%= f.hidden_field :user_id, :value => current_user.id %>
-    <%= f.submit "&#x2665;".html_safe, class:'like-button' %>
-    <%= text_post.likes.count %> likes</span>
+    <%= f.submit "favorite".html_safe, class:'like-button material-icons' %>
+    <%= text_post.likes.count %></span>
+    <%= link_to "delete", text_post_path(text_post), class: 'delete-button material-icons', :method => :delete %>
   <% end %>
 <% end %>
 

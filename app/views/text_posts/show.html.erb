@@ -1,4 +1,4 @@
 <h1><%= @text_post.title %></h1>
 <p><%= @text_post.content %></p>
-<p><%= link_to "Edit", edit_text_post_path(@text_post), class: 'button-small' %>
-<%= link_to "Back", text_posts_path, class: 'button-small' %>
+<p><%= link_to "mode_edit", edit_text_post_path(@text_post), class: 'edit-button material-icons' %>
+<%= link_to "arrow_back", text_posts_path, class: 'edit-button material-icons' %>

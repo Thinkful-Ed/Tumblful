@@ -2,12 +2,14 @@
 <% @article_links.each do |article_link| %>
   <%= content_tag :h1, article_link.title %>
   <%= link_to article_link.url %><br><br>
-<%= link_to "Edit", edit_article_link_path(article_link), class: 'button-small'%>
   <%= form_for Like.new do |f| %>
+    <%= link_to "mode_edit", edit_article_link_path(article_link), class: 'edit-button material-icons' -%>
     <%= f.hidden_field :likeable_type, :value => article_link.class %>
     <%= f.hidden_field :likeable_id, :value => article_link.id %>
     <%= f.hidden_field :user_id, :value => current_user.id %>
-    <%= f.submit "&#x2665;".html_safe, class:'like-button' %>
-    <%= article_link.likes.count %> likes
+    <%= f.submit "favorite".html_safe, class:'like-button material-icons' %>
+    <%= article_link.likes.count %>
+    <%= link_to "delete", article_link_path(article_link), class: 'delete-button material-icons', :method => :delete %>
+
   <% end %>
 <% end %>
