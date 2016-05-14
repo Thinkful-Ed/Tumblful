@@ -262,7 +262,7 @@ ul {
   background: #738AC4;
   color: #FFF;
   padding: 1em;
-  margin-top: 8.5em;
+  margin-top: 10em;
 }
 
 .tumblful-heart {
@@ -345,6 +345,12 @@ ul {
   background: #FFF;
 }
 
+.delete-button:active{
+  color: #FFF;
+  background: #C90000;
+}
+
+
 .edit-button {
   color: #FFF;
   background: #FFCA48;
@@ -360,4 +366,9 @@ ul {
 .edit-button:hover {
   color: #FFCA48;
   background: #FFF;
+}
+
+.edit-button:active {
+  color: #FFF;
+  background: #FFCA48;
 }
