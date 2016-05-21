@@ -1,8 +1,12 @@
-Tumblful
+![Tumblful Logo](app/assets/images/tumblful.png?raw=true "Tumblful Logo")
 =============
-This is my fork of Tumblful which was created as part of the Thinkful course "Essentials of Full Stack Development in Rails."
-Tumblful is a micro-blogging app in the style of Tumblr. It was created based on the codebase of Tweetful which is another app in the course.
+# Overview
 
+#### Outline of Tumblful
+
+This is my fork of Tumblful which was created as part of the Thinkful course "Essentials of Full Stack Development in Rails." Tumblful is a micro-blogging app in the style of Tumblr. It was created based on the codebase of Tweetful which is another app created for the course.
+
+#### What I Learned Making This Webapp
 As part of the course curriculum I learned how to:
 
 1. Create models
@@ -20,19 +24,26 @@ As part of the course curriculum I learned how to:
         * TextPostsController
         * ArticleLinksController
 
+4. Implement Functionality Using the Above-Mentioned Controllers and Models With Their Views
+   * Like Button
+   * Delete Button
+   * Creating New Entries
+
+#### Visual Styling
+
 I also reworked a lot of the Tumblful CSS, as you can see in the screenshots below.
 
-Initial Version of Tumblful
+##### Initial Version of Tumblful
 
-![Screenshot of the initial version of Tumblful](app/assets/images/InitialTumblful.png?raw=true "Initial version of Tumblful")
+![Screenshot of the initial version of Tumblful](app/assets/images/InitialTumblful.png?raw=true "Initial Tumblful")
 
-My fork of Tumblful
-
+##### My Fork of Tumblful
 ![Screenshot of my fork of Tumblful](app/assets/images/ForkedTumblful3.png?raw=true "My fork of Tumblful")
 
-Special thanks to the Thinkful community for helping me debug my code when I ran into issues.
+#### Special Thanks
+Thank You to the Thinkful community for helping me debug my code when I ran into issues.
 
-Before Beginning
+## Before Beginning
 -------------
 
 Ensure you have the latest version of Ruby Version Manager (RVM) and ruby 2.1.5 installed.
@@ -48,7 +59,7 @@ rvm get head # rvm update for older versions
 rvm install ruby-2.1.5
 ```
 
-Getting Started
+## Getting Started
 -------------
 
 ```sh
@@ -75,7 +86,7 @@ Start by creating a user for yourself and then consider using the rake tasks bel
 additional test data.
 
 
-Run the Tests
+## Run the Tests
 -------------
 
 ```sh
