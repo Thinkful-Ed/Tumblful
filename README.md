@@ -38,7 +38,7 @@ I also reworked a lot of the Tumblful CSS, as you can see in the screenshots bel
 ![Screenshot of the initial version of Tumblful](app/assets/images/InitialTumblful.png?raw=true "Initial Tumblful")
 
 ##### My Fork of Tumblful
-![Screenshot of my fork of Tumblful](app/assets/images/ForkedTumblful3.png?raw=true "My fork of Tumblful")
+![Screenshot of my fork of Tumblful](app/assets/images/ForkedTumblful4.png?raw=true "My fork of Tumblful")
 
 #### Special Thanks
 Thank You to the Thinkful community for helping me debug my code when I ran into issues.
