@@ -1,7 +1,7 @@
 <%= link_to "Create a New Image Link", new_image_link_path, class: 'button-small' %> 
 <% @image_links.each do |image_link| %>
   <%= content_tag :h1, image_link.title %>
-  <%= image_tag image_link.url,  :width => "250" %><br><br>
+  <%= image_tag image_link.url, :class => 'image-link-image thumbnail' %><br><br>
   <%= form_for Like.new do |f| %>
     <%= f.hidden_field :likeable_type, :value => image_link.class %>
     <%= f.hidden_field :likeable_id, :value => image_link.id %>

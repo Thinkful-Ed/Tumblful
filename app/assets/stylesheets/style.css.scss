@@ -372,3 +372,18 @@ ul {
   color: #FFF;
   background: #FFCA48;
 }
+
+.thumbnail {
+  width: 10em;
+  transition: all .5s ease 0s;
+}
+
+.large-image {
+  width: 30em;
+  -mox-box-shadow: 0 0 15px #bbb;
+  -webkit-box-shadow: 0 0 15px #bbb;
+  box-shadow: 0 0 15px #bbb;
+  transition: all .5s ease 0s;
+  }
+  
+  
