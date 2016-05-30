@@ -267,7 +267,7 @@ ul {
 
 .tumblful-heart {
   color: #FF7878;
-  font-size: 24px; 
+  font-size: 24px;
   transition: all 0.8s ease 0s;
 }
 
@@ -291,7 +291,7 @@ ul {
   transition: all .5s ease 0s;
   cursor: pointer;
   outline: 0;
-  margin-left:1em;
+  margin-left: 1em;
 }
 
 .like-button:hover {
@@ -337,7 +337,7 @@ ul {
   transition: all .5s ease 0s;
   cursor: pointer;
   outline: 0;
-  margin-left:1em;
+  margin-left: 1em;
 }
 
 .delete-button:hover {
@@ -345,11 +345,10 @@ ul {
   background: #FFF;
 }
 
-.delete-button:active{
+.delete-button:active {
   color: #FFF;
   background: #C90000;
 }
-
 
 .edit-button {
   color: #FFF;
@@ -384,6 +383,4 @@ ul {
   -webkit-box-shadow: 0 0 15px #bbb;
   box-shadow: 0 0 15px #bbb;
   transition: all .5s ease 0s;
-  }
-  
-  
+}
