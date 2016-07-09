@@ -2,4 +2,4 @@ var resourceDiv = $('#<%= @resource.class.to_s.underscore %>_<%= @resource.id %>
 var oldLikesString = $(resourceDiv).find('.total-likes').text();
 var oldLikesNum = parseInt(oldLikesString);
 var newLikes = oldLikesNum += 1;
-$(resourceDiv).find('.total-likes').text(newLikes);
+$(resourceDiv).find('.total-likes').text(newLikes).effect('highlight', {color: '#FF7878'}).animate({color: "#FF7878",});
