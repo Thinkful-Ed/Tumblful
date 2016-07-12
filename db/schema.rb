@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160506183910) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "article_links", force: true do |t|
     t.string   "title"
     t.string   "url"
@@ -27,7 +30,7 @@ ActiveRecord::Schema.define(version: 20160506183910) do
     t.datetime "updated_at"
   end
 
-  add_index "follows", ["user_id", "following_id"], name: "index_follows_on_user_id_and_following_id"
+  add_index "follows", ["user_id", "following_id"], name: "index_follows_on_user_id_and_following_id", using: :btree
 
   create_table "image_links", force: true do |t|
     t.string   "title"
@@ -45,7 +48,7 @@ ActiveRecord::Schema.define(version: 20160506183910) do
     t.integer  "likeable_id"
   end
 
-  add_index "likes", ["user_id"], name: "index_likes_on_user_id"
+  add_index "likes", ["user_id"], name: "index_likes_on_user_id", using: :btree
 
   create_table "text_posts", force: true do |t|
     t.string   "title"
@@ -62,7 +65,7 @@ ActiveRecord::Schema.define(version: 20160506183910) do
     t.datetime "updated_at"
   end
 
-  add_index "tweets", ["user_id"], name: "index_tweets_on_user_id"
+  add_index "tweets", ["user_id"], name: "index_tweets_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -84,8 +87,8 @@ ActiveRecord::Schema.define(version: 20160506183910) do
     t.string   "username"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  add_index "users", ["unlock_token"], name: "index_users_on_unlock_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["unlock_token"], name: "index_users_on_unlock_token", unique: true, using: :btree
 
 end
