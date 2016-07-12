@@ -52,4 +52,6 @@ group :development, :test do
   gem 'shoulda-matchers'
 end
 
+gem "rails_12factor"
+
 gem 'jquery-ui-rails'
