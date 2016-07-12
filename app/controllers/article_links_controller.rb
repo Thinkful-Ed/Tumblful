@@ -1,4 +1,8 @@
 class ArticleLinksController < ApplicationController
+
+    before_action :authenticate_user!
+
+
     def index
         @article_links = ArticleLink.all
     end
