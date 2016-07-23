@@ -4,4 +4,3 @@ rvm:
 
 before_script:
     bundle exec rake db:create db:migrate db:schema:load
-    psql -c "CREATE USER postgres WITH PASSWORD 'ce5x9ZbV-bXZacjWsmCYUPfvjI';" -U postgres
