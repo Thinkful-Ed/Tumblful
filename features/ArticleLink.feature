@@ -5,7 +5,7 @@ Feature: Article Links
     When I click "All Article Links"
     Then I will see the text "You need to sign in or sign up before continuing."
     
-  Scenario: As a user, I should be able to visit the Article Links page
+  Scenario: As a valid and logged in user, I should be able to visit the Article Links page
     Given a valid user
     And that I visit the login page
     And that I am logged in as a valid user

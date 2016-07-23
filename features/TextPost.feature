@@ -5,7 +5,7 @@ Feature: Text Posts
     When I click "All Text Posts"
     Then I will see the text "You need to sign in or sign up before continuing."
     
-  Scenario: As a user, I should be able to visit the Text Posts page
+  Scenario: As a valid and logged in user, I should be able to visit the Text Posts page
     Given a valid user
     And that I visit the login page
     And that I am logged in as a valid user

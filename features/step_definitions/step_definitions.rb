@@ -49,3 +49,6 @@ When(/^I fill in "([^"]*)" with the text "([^"]*)"$/) do |field, text|
     fill_in ("#{field}"), :with => ("#{text}")
 end
 
+Then(/^I will not see the element "([^"]*)"$/) do |selector|
+    expect(page).to have_no_css("#{selector}")
+end
