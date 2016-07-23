@@ -37,6 +37,10 @@ Then(/^I will see the text "([^"]*)"$/) do |text|
     expect(page).to have_content("#{text}")
 end
 
+Then(/^I will not see the text "([^"]*)"$/) do |text|
+    expect(page).to have_no_content("#{text}")
+end
+
 Then(/^I will see the element "([^"]*)"$/) do |selector|
     expect(page).to have_css("#{selector}")
 end
