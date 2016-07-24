@@ -15,7 +15,7 @@ describe User do
 
   context "validations" do
     it { should validate_presence_of :email }
-    it { should validate_uniqueness_of :email }
+    it { should validate_uniqueness_of(:email).case_insensitive }
     it { should validate_presence_of :name }
     it { should validate_presence_of :password }
     it { should validate_confirmation_of :password }
@@ -36,10 +36,4 @@ describe User do
       User.all_except(user).load.map(&:id).should == @ids
     end
   end
-
-    before do
-      t1
-      user.follows.create(:following => t2.user)
-      t3
-    end
 end
