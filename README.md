@@ -1,7 +1,5 @@
 ![Tumblful Logo](app/assets/images/tumblful.png?raw=true "Tumblful Logo")
-[![Build Status](https://travis-ci.org/FPhillips27/Tumblful.svg?branch=master)](https://travis-ci.org/FPhillips27/Tumblful)
-[![Code Climate](https://codeclimate.com/github/FPhillips27/Tumblful/badges/gpa.svg)](https://codeclimate.com/github/FPhillips27/Tumblful)
-[![Test Coverage](https://codeclimate.com/github/FPhillips27/Tumblful/badges/coverage.svg)](https://codeclimate.com/github/FPhillips27/Tumblful/coverage)
+[![Build Status](https://travis-ci.org/FPhillips27/Tumblful.svg?branch=master)](https://travis-ci.org/FPhillips27/Tumblful) [![Code Climate](https://codeclimate.com/github/FPhillips27/Tumblful/badges/gpa.svg)](https://codeclimate.com/github/FPhillips27/Tumblful) [![Test Coverage](https://codeclimate.com/github/FPhillips27/Tumblful/badges/coverage.svg)](https://codeclimate.com/github/FPhillips27/Tumblful/coverage)
 =============
 # Overview
 
