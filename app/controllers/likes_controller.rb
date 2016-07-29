@@ -18,7 +18,7 @@ class LikesController < ApplicationController
   end
   
   def find_resource
-    type = params[:like][:likeable_type].safe_constantize
+    type = params[:like][:likeable_type].safe_giconstantize
     id = params[:like][:likeable_id]
 
     type.send(:find, id)
@@ -26,8 +26,8 @@ class LikesController < ApplicationController
 end
 
 private
-def person_params
-      params.require(:likes).permit(:name, :age)
+def like_params
+      params.require(:likes).permit(:user_id, :likeable_type, :likeable_id)
 end
 
   
