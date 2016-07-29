@@ -24,3 +24,10 @@ class LikesController < ApplicationController
     type.send(:find, id)
   end
 end
+
+private
+def person_params
+      params.require(:likes).permit(:name, :age)
+end
+
+  

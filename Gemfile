@@ -63,3 +63,5 @@ group :test do
 end
 
 gem "codeclimate-test-reporter", group: :test, require: nil
+
+gem 'strong_parameters'
