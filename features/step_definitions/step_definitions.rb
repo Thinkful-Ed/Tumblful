@@ -52,3 +52,25 @@ end
 Then(/^I will not see the element "([^"]*)"$/) do |selector|
     expect(page).to have_no_css("#{selector}")
 end
+
+Given(/^I enter a bad user email and password$/) do
+    find('#sign_in_form').fill_in('user_email', :with => 'BadActor@BadEmail.horse')
+    find('#sign_in_form').fill_in('user_password', :with => 'BadPassword')
+    first('#sign_in_form input[type="submit"]').click
+end
+
+When(/^I sign up using too short of a password$/) do
+    find('#sign_up_form').fill_in('user_name', :with => 'User Name')
+    find('#sign_up_form').fill_in('user_username', :with => 'Username')
+    find('#sign_up_form').fill_in('user_email', :with => 'UserName@useremail.com')
+    find('#sign_up_form').fill_in('user_password', :with => 'Short')
+    first('#sign_up_form input[type="submit"]').click
+end
+
+When(/^I sign up as a user$/) do
+    find('#sign_up_form').fill_in('user_name', :with => 'User Name')
+    find('#sign_up_form').fill_in('user_username', :with => 'Username')
+    find('#sign_up_form').fill_in('user_email', :with => 'UserName@useremail.com')
+    find('#sign_up_form').fill_in('user_password', :with => 'UserPassword')
+    first('#sign_up_form input[type="submit"]').click
+end
