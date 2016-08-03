@@ -22,7 +22,7 @@ class ArticleLinksController < ApplicationController
     def create
         @article_link = ArticleLink.new(url: params[:article_link][:url], title: params[:article_link][:title])
         if @article_link.save
-            redirect_to article_links_path, :notice => "Your Article Link has been saved."
+            redirect_to article_links_path, :notice => "Your Article Link has been created."
         else
             @errors = @article_link.errors
             render :new
@@ -32,7 +32,7 @@ class ArticleLinksController < ApplicationController
     def update
         @article_link = ArticleLink.find(params[:id])
         if @article_link.update(url: params[:article_link][:url], title: params[:article_link][:title])
-            redirect_to article_links_path, :notice => "Your Article Link has been saved."
+            redirect_to article_links_path, :notice => "Your Article Link has been updated."
         else
             @errors = @article_link.errors
             render :edit
@@ -42,7 +42,7 @@ class ArticleLinksController < ApplicationController
     def destroy
         @article_link = ArticleLink.find(params[:id])
         @article_link.destroy
-        redirect_to article_links_path,  :notice => "Your Article Link has been deleted"
+        redirect_to article_links_path,  :notice => "Your Article Link has been deleted."
 
     end
 end
