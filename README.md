@@ -1,8 +1,50 @@
-Tumblful
+![Tumblful Logo](app/assets/images/tumblful.png?raw=true "Tumblful Logo")
+[![Build Status](https://travis-ci.org/FPhillips27/Tumblful.svg?branch=master)](https://travis-ci.org/FPhillips27/Tumblful) [![Code Climate](https://codeclimate.com/github/FPhillips27/Tumblful/badges/gpa.svg)](https://codeclimate.com/github/FPhillips27/Tumblful) [![Test Coverage](https://codeclimate.com/github/FPhillips27/Tumblful/badges/coverage.svg)](https://codeclimate.com/github/FPhillips27/Tumblful/coverage)
 =============
-This is the sample version of Tumblful, an extension of Tweetful for creating different types of posts, produced for Thinkful's "Essentials of Full Stack Development" course.
+# Overview
 
-Before Beginning
+#### Outline of Tumblful
+
+This is my fork of Tumblful which was created as part of the Thinkful course "Essentials of Full Stack Development in Rails." Tumblful is a micro-blogging app in the style of Tumblr. It was created based on the codebase of Tweetful which is another app created for the course.
+
+#### What I Learned Making This Webapp
+As part of the course curriculum I learned how to:
+
+1. Create models
+    * Models created are:
+        * ImageLink
+        * TestPost
+        * ArticleLink
+
+2. Create scopes
+    * Created a scope for ArticleLink which allows the user to see the 10 most recent instances in reverse chronological order and validates that the user has input a url to avoid generating exceptions.
+
+3. Create Controllers
+    * Controllers created are:
+        * ImageLinksController
+        * TextPostsController
+        * ArticleLinksController
+
+4. Implement Functionality Using the Above-Mentioned Controllers and Models With Their Views
+   * Like Button
+   * Delete Button
+   * Creating New Entries
+
+#### Visual Styling
+
+I also reworked a lot of the Tumblful CSS, as you can see in the screenshots below.
+
+##### Initial Version of Tumblful
+
+![Screenshot of the initial version of Tumblful](app/assets/images/InitialTumblful.png?raw=true "Initial Tumblful")
+
+##### My Fork of Tumblful
+![Screenshot of my fork of Tumblful](app/assets/images/ForkedTumblful4.png?raw=true "My fork of Tumblful")
+
+#### Special Thanks
+Thank You to the Thinkful community for helping me debug my code when I ran into issues.
+
+## Before Beginning
 -------------
 
 Ensure you have the latest version of Ruby Version Manager (RVM) and ruby 2.1.5 installed.
@@ -18,7 +60,7 @@ rvm get head # rvm update for older versions
 rvm install ruby-2.1.5
 ```
 
-Getting Started
+## Getting Started
 -------------
 
 ```sh
@@ -45,7 +87,7 @@ Start by creating a user for yourself and then consider using the rake tasks bel
 additional test data.
 
 
-Run the Tests
+## Run the Tests
 -------------
 
 ```sh
@@ -56,5 +98,7 @@ Authors
 -------
 
 **Scott Robinson**
-
 - http://github.com/SnareChops
+ 
+**Forrest Phillips**
+- https://github.com/FPhillips27

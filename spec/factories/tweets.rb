@@ -3,6 +3,6 @@
 FactoryGirl.define do
   factory :tweet do
     user { FactoryGirl.create(:user) }
-    content { Faker::Lorem.sentence(3) }
+    content { FFaker::Lorem.sentence(3) }
   end
 end

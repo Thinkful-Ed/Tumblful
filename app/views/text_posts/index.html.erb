@@ -1,0 +1,21 @@
+<%= link_to "Create a New Text Post", new_text_post_path, class: 'button-small' %> 
+<% @text_posts.each do |text_post| %>
+  <%= div_for text_post do %>
+  <%= content_tag :h1, text_post.title %>
+  <%= content_tag :p, truncate(text_post.content, length: 300, separator: ' ') %> 
+  
+    <div class='likes'>
+    <span class='total-likes'><%= text_post.likes.count %></span> favorites
+    </div>
+  
+  <%= form_for Like.new, :remote => true do |f| %>
+    <%= link_to "pageview", text_post_path(text_post), class: 'edit-button material-icons' %>
+    <%= f.hidden_field :likeable_type, :value => text_post.class %>
+    <%= f.hidden_field :likeable_id, :value => text_post.id %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.submit "favorite".html_safe, class:'like-button material-icons' %>
+    <%= link_to "delete", text_post_path(text_post), class: 'delete-button material-icons', :method => :delete %>
+  <% end %>
+<% end %>
+<% end %>
+

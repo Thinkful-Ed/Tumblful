@@ -1,0 +1,4 @@
+<h1><%= @image_link.title %></h1>
+<p><%= image_tag @image_link.url, :class => "image-link-image thumbnail" %></p>
+<%= link_to "edit", edit_image_link_path(@image_link), class: 'edit-button material-icons' %>
+<%= link_to "arrow_back", image_links_path, class: 'edit-button material-icons'%>

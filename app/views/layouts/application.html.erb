@@ -5,17 +5,40 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <meta charset="UTF-8">
+  <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+<div id="wrapper">
 <nav>
-  <a class="nav-logo-link page-title" href="/">
-    <h1 class='pull-left'>Tumblful</h1>
-  </a>
-  <%= button_to("Sign out", destroy_user_session_path, :method => :delete, :class => "pull-right") if user_signed_in? %>
+  <div class="nav-logo-link page-title">
+    <center><h1 class="tumblful-header">
+      <%= image_tag "tumblful.png", :size => "250x62" %>
+    </h1></center>
+  </div>
+  <nav>
+      <%= link_to("Sign Out", destroy_user_session_path, :method => :delete, :class => "button-signout") if user_signed_in? %>
+      <br><br>
+      <ul class="navbar-buttons">
+        <br><br><br>
+        <%= link_to "Home", root_path, class: 'button'  %>
+        <%= link_to "All Image Links", image_links_path, class: 'button' %>
+        <%= link_to "All Text Posts", text_posts_path, class: 'button'  %>
+        <%= link_to "All Article Links", article_links_path, class: 'button'  %>
+        <br><br>
+      </ul>
+</nav>
 </nav>
 <%= notices %>
 <div class='main-content'>
   <%= yield %>
 </div>
+<br>
+<br>
+</div>
+<footer id="tumblful-footer">
+  <center>Thank you for using <strong>tumblful</strong>.  <span class="tumblful-heart">&hearts;</span></center>
+</footer>
 </body>
 </html>

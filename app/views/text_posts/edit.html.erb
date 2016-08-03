@@ -1,0 +1,27 @@
+<p>Editing the Post: <strong><%= @text_post.title %></strong></p>
+<%= form_for(@text_post) do |f| %>
+    <% if @errors %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@errors.count, "error") %> prohibited this Text Post from being saved:</h2>
+
+    <ul>
+      <% @errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_field :content %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+    <br>
+  <div class="actions">
+    <%= f.submit "save", class:'edit-button material-icons' %>
+  </div>
+  <br><br>
+<% end %>

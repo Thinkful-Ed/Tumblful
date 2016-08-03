@@ -2,6 +2,10 @@ Tumblful::Application.routes.draw do
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  resources :image_links
+  resources :text_posts
+  resources :article_links
+  resources :likes, :only => [:create]
 
   authenticated :user do
     resources :follows, :except => [:new, :edit, :show, :update]
