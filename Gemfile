@@ -59,6 +59,10 @@ group :development, :test do
 
   # Add Selenium WebDriver for Capybara
   gem 'selenium-webdriver'
+
+  gem 'pry-byebug'
+
+  gem 'rails-controller-testing'
 end
 
 gem 'jquery-ui-rails'
