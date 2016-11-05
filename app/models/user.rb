@@ -8,9 +8,15 @@ class User < ActiveRecord::Base
   has_many :image_links
   has_many :text_posts
   has_many :likes
+  has_many :tweets
 
   validates :name, :presence => true
   validates :username, :presence => true, :uniqueness => true
+
+  def all_tweets
+    debugger
+    p "Done"
+  end
 
   # Scope method to get all users except the one passed.
   #

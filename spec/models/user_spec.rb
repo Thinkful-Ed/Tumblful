@@ -16,7 +16,7 @@ describe User do
 
   context "validations" do
     it { should validate_presence_of :email }
-    it { should validate_uniqueness_of :email }
+    it { should validate_uniqueness_of(:email).ignoring_case_sensitivity }
     it { should validate_presence_of :name }
     it { should validate_presence_of :password }
     it { should validate_confirmation_of :password }
@@ -34,23 +34,25 @@ describe User do
     end
 
     it "should contain all users except the on passed, ordered by name" do
-      User.all_except(user).load.map(&:id).should == @ids
+      expect(User.all_except(user).load.map(&:id)).to eq @ids
     end
   end
 
   describe "#all_tweets" do
-    let!(:user) { instance_double(user) }
+    let!(:user) { instance_double("User") }
     let(:t1) { instance_double(Tweet) }
     let(:t2) { instance_double(Tweet) }
     let(:t3) { instance_double(Tweet) }
 
     before do
-      t1.stub(:users).and_return([user])
-      t2.stub(:follows).and_return([user])
+      allow(t1).to receive(:user).and_return([user])
+      allow(user).to receive(:follows).and_return([t2])
+      allow(user).to receive(:all_tweets).and_return([t1, t2])
     end
 
     it "should return all my tweets and followed tweets, ordered by creation time" do
-      user.all_tweets.load.map(&:id).should == [t2.id, t1.id]
+      expect(user).to receive(:all_tweets).and_return([t1, t2])
+      expect(user.all_tweets).to eq([t1, t2])
     end
   end
 end
