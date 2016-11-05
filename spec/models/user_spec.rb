@@ -39,15 +39,14 @@ describe User do
   end
 
   describe "#all_tweets" do
-    let!(:user) { FactoryGirl.create(:user) }
-    let(:t1) { FactoryGirl.create(:tweet, :user => user)}
-    let(:t2) { FactoryGirl.create(:tweet) }
-    let(:t3) { FactoryGirl.create(:tweet) }
+    let!(:user) { instance_double(user) }
+    let(:t1) { instance_double(Tweet) }
+    let(:t2) { instance_double(Tweet) }
+    let(:t3) { instance_double(Tweet) }
 
     before do
-      t1
-      user.follows.create(:following => t2.user)
-      t3
+      t1.stub(:users).and_return([user])
+      t2.stub(:follows).and_return([user])
     end
 
     it "should return all my tweets and followed tweets, ordered by creation time" do

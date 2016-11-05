@@ -29,4 +29,19 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+
+  # Enable file-type inference. This assumes that specs in certain directories
+  # to be treated in certain ways by default. For example, model specs are in
+  # `spec/models`
+  config.infer_spec_type_from_file_location!
+end
+
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    # Choose a test framework:
+    with.test_framework :rspec
+ 
+    # Or, choose the following (which implies all of the above):
+    with.library :rails
+  end
 end
