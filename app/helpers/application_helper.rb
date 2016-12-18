@@ -6,15 +6,15 @@ module ApplicationHelper
   # will be generated. Otherwise, a follow (CREATE) form will be generated.
   #
   def follow_link(user)
-    follow = Follow.where(:user => current_user, :following => user)
+    follow = Follow.where(user: current_user, following: user)
     if follow.exists?
-      button_to("Unfollow", follow_path(follow.first), :method => :delete,
-                                                       :class => 'btn btn-danger mar-top-5',
-                                                       :form => { :class => 'form-inline pull-right' })
+      button_to("Unfollow", follow_path(follow.first), method: :delete,
+                                                       class: 'btn btn-danger mar-top-5',
+                                                       form: { class: 'form-inline pull-right' })
     else
-      form_for(:follow, :url => follows_path, :method => 'POST', :html => { :class => 'pull-right' }) do |f|
-        f.hidden_field(:following_id, :value => user.id.to_s) +
-        f.submit('Follow', :class => "btn btn-primary mar-top-5")
+      form_for(:follow, url: follows_path, method: 'POST', html: { class: 'pull-right' }) do |f|
+        f.hidden_field(:following_id, value: user.id.to_s) +
+        f.submit('Follow', class: "btn btn-primary mar-top-5")
       end
     end
   end
@@ -23,17 +23,17 @@ module ApplicationHelper
   # call to the #active_class method.
   #
   def nav_item(name, path)
-    content_tag(:li, link_to(name, path), :class => active_class(name))
+    content_tag(:li, link_to(name, path), class: active_class(name))
   end
 
   # Generates HTML for notices based on the flash variable. Leverages #notice_class to
   # determine the look of each notice type.
   #
   def notices
-    content_tag :div, :class => 'alert-float' do
+    content_tag :div, class: 'alert-float' do
       html = ''
       [:alert, :error, :notice, :success].each do |type|
-        html += content_tag(:div, notice_text(type), :class => notice_class(type)) if notice?(type)
+        html += content_tag(:div, notice_text(type), class: notice_class(type)) if notice?(type)
       end
       html.html_safe
     end

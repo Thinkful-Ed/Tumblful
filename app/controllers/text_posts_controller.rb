@@ -19,7 +19,7 @@ class TextPostsController < ApplicationController
     def create
         @text_post = TextPost.new(content: params[:text_post][:content], title: params[:text_post][:title])
         if @text_post.save
-            redirect_to text_posts_path, :notice => "Your Text Post has been saved."
+            redirect_to text_posts_path, notice: "Your Text Post has been saved."
         else
             @errors = @text_post.errors
             render :new
@@ -29,7 +29,7 @@ class TextPostsController < ApplicationController
     def update
         @text_post = TextPost.find(params[:id])
         if @text_post.update(content: params[:text_post][:content], title: params[:text_post][:title])
-            redirect_to text_posts_path, :notice => "Your Text Post has been saved."
+            redirect_to text_posts_path, notice: "Your Text Post has been saved."
         else
             @errors = @text_post.errors
             render :edit
@@ -39,6 +39,6 @@ class TextPostsController < ApplicationController
     def destroy
         @text_post = TextPost.find(params[:id])
         @text_post.destroy
-        redirect_to text_posts_path,  :notice => "Your Text Post has been deleted"
+        redirect_to text_posts_path,  notice: "Your Text Post has been deleted"
     end
 end

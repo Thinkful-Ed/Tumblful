@@ -6,15 +6,15 @@ Tumblful::Application.routes.draw do
   resources :text_posts
   resources :article_links
   resources :tweets
-  resources :likes, :only => [:create]
+  resources :likes, only: [:create]
 
   authenticated :user do
-    resources :follows, :except => [:new, :edit, :show, :update]
-    root :to => 'follows#index', :as => :user_root
+    resources :follows, except: [:new, :edit, :show, :update]
+    root to: 'follows#index', as: :user_root
   end
 
   # You can have the root of your site routed with "root"
-  root :to => 'home#index'
+  root to: 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

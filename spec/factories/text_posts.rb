@@ -1,7 +1,7 @@
 FactoryGirl.define do
-  factory :text_post, :class => 'TextPosts' do
+  factory :text_post, class: 'TextPosts' do
     title "MyString"
-content "MyText"
+    content "MyText"
   end
 
 end

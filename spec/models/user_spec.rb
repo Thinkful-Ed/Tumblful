@@ -26,6 +26,9 @@ describe User do
 
   describe ".all_except" do
     let!(:user) { FactoryGirl.create(:user) }
+    let(:t1) { instance_double(Tweet) }
+    let(:t2) { instance_double(Tweet) }
+    let(:t3) { instance_double(Tweet) }
 
     before do
       users = 10.times.map { FactoryGirl.create(:user) }

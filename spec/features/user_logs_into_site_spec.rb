@@ -11,6 +11,7 @@ feature 'User logs into site', type: :feature, js: true do
     )
   end
   scenario 'User with valid credentials logs into site' do
+    pending
     visit root_path
     fill_in 'Username or email', with:'admin@admin.com'
     fill_in 'Existing Password', with:'admin123'

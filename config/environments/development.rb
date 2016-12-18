@@ -28,5 +28,5 @@ Tumblful::Application.configure do
   config.assets.debug = true
 
   # see Controller filters and helpers at: https://github.com/plataformatec/devise
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
 end
