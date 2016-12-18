@@ -3,7 +3,7 @@ class TweetsController < ApplicationController
   # TODO: Deprecate this class. Leaving here for reference
     
   # All actions in this controller require the presence of an authenticated user.
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
 
   # GET /tweets
   #
@@ -32,11 +32,11 @@ class TweetsController < ApplicationController
     @tweet = current_user.tweets.create(tweet_params)
     if @tweet.valid?
       flash[:success] = "Your tweet was shared"
-      redirect_to :action => :index and return
+      redirect_to key: "value", action: "index" and return
     else
       get_tweets
       flash[:error] = "Your tweet could not be saved"
-      render :action => :index and return
+      render action: "index" and return
     end
   end
 
