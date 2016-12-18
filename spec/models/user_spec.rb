@@ -2,26 +2,26 @@ require 'spec_helper'
 
 describe User do
   context "associations" do
-    it { should have_many :follows }
-    it { should have_many :tweets }
+    it { is_expected.to have_many :follows }
+    it { is_expected.to have_many :tweets }
   end
 
   context "factories" do
     describe "#user" do
       subject { FactoryGirl.build(:user) }
 
-      it { should be_valid }
+      it { is_expected.to be_valid }
     end
   end
 
   context "validations" do
-    it { should validate_presence_of :email }
-    it { should validate_uniqueness_of(:email).ignoring_case_sensitivity }
-    it { should validate_presence_of :name }
-    it { should validate_presence_of :password }
-    it { should validate_confirmation_of :password }
-    it { should validate_presence_of :username }
-    it { should validate_uniqueness_of :username }
+    it { is_expected.to validate_presence_of :email }
+    it { is_expected.to validate_uniqueness_of(:email).ignoring_case_sensitivity }
+    it { is_expected.to validate_presence_of :name }
+    it { is_expected.to validate_presence_of :password }
+    it { is_expected.to validate_confirmation_of :password }
+    it { is_expected.to validate_presence_of :username }
+    it { is_expected.to validate_uniqueness_of :username }
   end
 
   describe ".all_except" do

@@ -2,19 +2,19 @@ require 'spec_helper'
 
 describe Tweet do
   context "associations", type: :model do
-    it { should belong_to(:user) }
+    it { is_expected.to belong_to(:user) }
   end
 
   context "factories" do
     describe "#tweet" do
       subject { FactoryGirl.build(:tweet) }
 
-      it { should be_valid }
+      it { is_expected.to be_valid }
     end
   end
 
   context "validations", type: :model do
-    it { should validate_presence_of :content }
+    it { is_expected.to validate_presence_of :content }
     it "should not be valid when the length is between 2 and 140 characters" do
       t1 = Tweet.new(content: '1')
       t2 = Tweet.new(content: ':)')
@@ -33,7 +33,7 @@ describe Tweet do
       end
     end
 
-    it { should validate_presence_of :user }
+    it { is_expected.to validate_presence_of :user }
   end
 
   describe ".by_user_ids", type: :model do

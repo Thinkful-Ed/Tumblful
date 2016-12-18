@@ -6,14 +6,14 @@ describe FollowsController do
       subject { response }
       before { get :index }
 
-      it { should_not be_successful }
+      it { is_expected.to_not be_successful }
     end
 
     describe "POST create" do
       subject { response }
       before { post :create, params: { follow: { following_id: -1 } } }
 
-      it { should_not be_successful }
+      it { is_expected.to_not be_successful }
     end
 
     describe "DELETE destroy" do
@@ -22,7 +22,7 @@ describe FollowsController do
 
       before { delete :destroy, params: { id: follow.id } }
 
-      it{ should_not be_successful }
+      it { is_expected.to_not be_successful }
     end
   end
 
@@ -39,7 +39,7 @@ describe FollowsController do
         get :index
       end
 
-      it { should be_successful }
+      it { is_expected.to be_successful }
 
       it "should assign @users to all Users but the logged in one" do
         expect(assigns(:users).map(&:id)).to eql User.all_except(user).load.map(&:id)

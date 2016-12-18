@@ -7,14 +7,14 @@ describe TweetsController do
 
       before { get :index }
 
-      it { should_not be_successful }
+      it { is_expected.to_not be_successful }
     end
 
     describe "POST create" do
       subject { response }
       before { post :create, params: { tweet: { content: "Hello World!" } } }
 
-      it { should_not be_successful }
+      it { is_expected.to_not be_successful }
     end
   end
 
@@ -31,7 +31,7 @@ describe TweetsController do
 
       before { get :index }
 
-      it { should be_successful }
+      it { is_expected.to be_successful }
 
       it "should assign @tweets" do
         expect(assigns[:tweets]).to_not be_nil
