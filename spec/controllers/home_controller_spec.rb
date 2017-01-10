@@ -5,7 +5,7 @@ describe HomeController do
     it "should be successful" do
       get :index
 
-      response.should be_successful
+      expect(response).to be_successful
     end
   end
 end

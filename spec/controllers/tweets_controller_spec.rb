@@ -7,19 +7,22 @@ describe TweetsController do
 
       before { get :index }
 
-      it { should_not be_successful }
+      it { is_expected.to_not be_successful }
     end
 
     describe "POST create" do
       subject { response }
-      before { post :create, :tweet => { :content => "Hello World!" } }
+      before { post :create, params: { tweet: { content: "Hello World!" } } }
 
-      it { should_not be_successful }
+      it { is_expected.to_not be_successful }
     end
   end
 
   context "when a user is logged in" do
     let(:user) { FactoryGirl.create(:user) }
+    let!(:t1) { FactoryGirl.create(:tweet, user: user) }
+    let!(:t2) { FactoryGirl.create(:tweet, user: user) }
+    let!(:t3) { FactoryGirl.create(:tweet, user: user) }
 
     before { sign_in user }
 
@@ -28,29 +31,29 @@ describe TweetsController do
 
       before { get :index }
 
-      it { should be_successful }
+      it { is_expected.to be_successful }
 
       it "should assign @tweets" do
-        assigns[:tweets].should_not be_nil
+        expect(assigns[:tweets]).to_not be_nil
       end
     end
 
     describe "POST create" do
       let(:following) { FactoryGirl.create(:user) }
 
-      before { post :create, :tweet => { :content => "Hello World!" } }
+      before { post :create, params: { tweet: { content: "Hello World!" } } }
 
       it "should redirect to GET index" do
-        response.should redirect_to tweets_path
+        expect(response).to redirect_to "#{tweets_path}?key=value"
       end
 
       it "should display a success message" do
-        flash[:success].should == "Your tweet was shared"
+        expect(flash[:success]).to eq "Your tweet was shared"
       end
 
       it "should create a new record" do
         expect {
-          post :create, :tweet => { :content => "Hello World!" }
+          post :create, params: { tweet: { content: "Hello World!" } }
         }.to change { Tweet.count }.by(1)
       end
     end

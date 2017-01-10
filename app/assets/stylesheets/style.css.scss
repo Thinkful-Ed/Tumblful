@@ -1,7 +1,7 @@
 body {
   background-attachment: scroll;
   background-clip: border-box;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #3A4C78;
   background-origin: padding-box;
   background-size: auto;
   color: rgb(51, 51, 51);
@@ -22,21 +22,29 @@ body {
   padding-top: 0px;
   unicode-bidi: embed;
   width: 100%;
+  overflow-x: hidden;
 }
 
 nav {
-  background-image: image-url('twitter_web_sprite_bgs.png');
+  background-color: #212C45;
   background-repeat: repeat-x;
   min-height: 40px !important;
 }
 
 .nav-logo-link {
-  height: 12px;
-  padding: 10px 14px 18px;
+  height: 1em;
+  padding: 1em 2em 1em;
+  margin-top: -2.5em;
 }
 
 .main-content {
-  margin: 5px;
+  margin: auto;
+  background-color: #FFF;
+  padding: 5em;
+  padding-top: 8em;
+  padding-bottom: 8em;
+  width: 60%;
+  box-shadow: .2em .2em 0 #EEE, .4em .4em 0 #CCC, .6em .6em 0 #AAA;
 }
 
 a.page-title,
@@ -195,4 +203,190 @@ table.stats td:first-child {
 
 .pull-left {
   float: left;
+}
+
+ul {
+  list-style: none;
+}
+
+.button {
+  color: white;
+  background-color: #738AC4;
+  padding: 1em;
+  text-decoration: none;
+  border-radius: 15px;
+  transition: all .8s ease 0s;
+}
+
+.button:hover {
+  background-color: #4B6FC4;
+}
+
+.button:active {
+  background-color: #37508F;
+}
+
+.button-small {
+  color: #FFF;
+  background-color: #FFCA48;
+  padding: .5em;
+  text-decoration: none;
+  border-radius: 15px;
+  transition: all .8s ease 0s;
+  border: 0;
+  outline: 0;
+}
+
+.button-small:hover {
+  background-color: #D6A93D;
+}
+
+.button-small:active {
+  background-color: #3D341E;
+  outline: 0;
+}
+
+.tumblful-header {
+  text-decoration: none;
+  color: #FFF;
+  padding-top: 1.5em;
+}
+
+.navbar-buttons {
+  width: 100%;
+  margin-left: 32.5%;
+  padding-bottom: 1.5em;
+}
+
+#tumblful-footer {
+  background: #738AC4;
+  color: #FFF;
+  padding: 1em;
+  margin-top: 10em;
+}
+
+.tumblful-heart {
+  color: #FF7878;
+  font-size: 24px;
+  transition: all 0.8s ease 0s;
+  cursor: default;
+}
+
+.tumblful-heart:hover {
+  color: #FFF;
+  text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgb(255, 255, 255), 0 0 15px rgb(255, 255, 255), 0 0 20px rgb(255, 17, 119), 0 0 35px rgb(255, 17, 119), 0 0 40px rgb(255, 17, 119), 0 0 50px rgb(255, 17, 119), 0 0 75px rgb(255, 17, 119);
+}
+
+#wrapper {
+  position: relative;
+}
+
+.like-button {
+  color: #FFF;
+  font-size: 1.2em;
+  background: #FF7878;
+  border: none;
+  padding: .2em;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: all .5s ease 0s;
+  cursor: pointer;
+  outline: 0;
+  margin-left: 1em;
+}
+
+.like-button:hover {
+  color: #FF7878;
+  background: #FFF;
+}
+
+.like-button:active {
+  color: #FFF;
+  background: #FF7878;
+}
+
+.button-signout {
+  color: #FFF;
+  font-size: .8em;
+  background: #212C45;
+  border: none;
+  padding: 2em;
+  text-decoration: none;
+  border-radius: 0;
+  transition: all .5s ease 0s;
+  cursor: pointer;
+  outline: 0;
+  margin-left: 80%;
+}
+
+.button-signout:hover {
+  color: #FF7878;
+}
+
+.button-signout:active {
+  color: #FFF;
+}
+
+.delete-button {
+  color: #FFF;
+  font-size: 1.2em;
+  background: #C90000;
+  border: none;
+  padding: .2em;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: all .5s ease 0s;
+  cursor: pointer;
+  outline: 0;
+  margin-left: 1em;
+}
+
+.delete-button:hover {
+  color: #C90000;
+  background: #FFF;
+}
+
+.delete-button:active {
+  color: #FFF;
+  background: #C90000;
+}
+
+.edit-button {
+  color: #FFF;
+  background: #FFCA48;
+  border: none;
+  padding: .2em;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: all .5s ease 0s;
+  cursor: pointer;
+  outline: 0;
+}
+
+.edit-button:hover {
+  color: #FFCA48;
+  background: #FFF;
+}
+
+.edit-button:active {
+  color: #FFF;
+  background: #FFCA48;
+}
+
+.thumbnail {
+  width: 10em;
+  transition: all .5s ease 0s;
+}
+
+.large-image {
+  width: 30em;
+  -mox-box-shadow: 0 0 15px #bbb;
+  -webkit-box-shadow: 0 0 15px #bbb;
+  box-shadow: 0 0 15px #bbb;
+  transition: all .5s ease 0s;
+}
+
+.likes {
+  margin-bottom: 1.5em;
+  color: #777;
 }

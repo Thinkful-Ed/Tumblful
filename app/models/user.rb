@@ -4,9 +4,18 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :follows
+  has_many :article_links
+  has_many :image_links
+  has_many :text_posts
+  has_many :likes
+  has_many :tweets
 
-  validates :name, :presence => true
-  validates :username, :presence => true, :uniqueness => true
+  validates :name, presence: true
+  validates :username, presence: true, uniqueness: true
+
+  def all_tweets
+    tweets    
+  end
 
   # Scope method to get all users except the one passed.
   #

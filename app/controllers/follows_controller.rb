@@ -1,6 +1,6 @@
 class FollowsController < ApplicationController
   # All actions in this controller require the presence of an authenticated user.
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
 
   # GET /follows
   #
@@ -18,14 +18,14 @@ class FollowsController < ApplicationController
   # is set. Either way we are directed back to the index action.
   #
   def create
-    following = current_user.follows.where(:following_id => follow_params[:following_id]).first ||
+    following = current_user.follows.where(following_id: follow_params[:following_id]).first ||
       current_user.follows.create(follow_params)
     if following.present? and following.persisted?
       flash[:success] = "You are following @#{following.following.username}"
     else
       flash[:error] = "Your attempt to follow was unsuccessful"
     end
-    redirect_to :action => :index
+    redirect_to action: :index
   end
 
   # DELETE /follows/:id
@@ -42,7 +42,7 @@ class FollowsController < ApplicationController
     else
       flash[:error] = "Your attempt to unfollow was not successful"
     end
-    redirect_to :action => :index
+    redirect_to action: :index
   end
 
   private
@@ -59,6 +59,6 @@ class FollowsController < ApplicationController
   end
 
   def resource
-    @resource ||= current_user.follows.where(:id => params[:id]).first
+    @resource ||= current_user.follows.where(id: params[:id]).first
   end
 end

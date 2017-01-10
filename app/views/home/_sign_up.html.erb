@@ -1,5 +1,4 @@
 <h4>New to Tumblful? <span>Sign up</span></h4>
-<hr />
 <%= form_for resource, :url => user_registration_path,
                        :builder => InlineErrorsBuilder,
                        :method => :POST,
@@ -21,7 +20,7 @@
     <% end %>
 
     <%= content_tag :div do %>
-      <%= f.password_field :password, :placeholder => "Password" %>
+      <%= f.password_field :password, :placeholder => "New Password" %>
       <%= f.errors_for :password %>
     <% end %>
 

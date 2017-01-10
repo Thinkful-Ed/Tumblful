@@ -6,7 +6,7 @@ describe ApplicationHelper do
       before { flash[:success] = "Success!!" }
 
       it "should return a success alert" do
-        helper.notices.should =~ Regexp.new(flash[:success])
+        expect(helper.notices).to match Regexp.new(flash[:success])
       end
     end
 
@@ -14,7 +14,7 @@ describe ApplicationHelper do
       before { flash[:notice] = "Notice" }
 
       it "should return a normal alert" do
-        helper.notices.should =~ Regexp.new(flash[:notice])
+        expect(helper.notices).to match Regexp.new(flash[:notice])
       end
     end
 
@@ -22,7 +22,7 @@ describe ApplicationHelper do
       before { flash[:alert] = "Alert" }
 
       it "should return a normal alert" do
-        helper.notices.should =~ Regexp.new(flash[:alert])
+        expect(helper.notices).to match Regexp.new(flash[:alert])
       end
     end
 
@@ -30,7 +30,7 @@ describe ApplicationHelper do
       before { flash[:error] = "Error!!" }
 
       it "should return an error alert" do
-        helper.notices.should =~ Regexp.new(flash[:error])
+        expect(helper.notices).to match Regexp.new(flash[:error])
       end
     end
   end

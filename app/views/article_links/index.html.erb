@@ -1,0 +1,22 @@
+<%= link_to "Create a New Article Link", new_article_link_path, class: 'button-small' %> 
+
+<% @article_links.each do |article_link| %>
+    <%= div_for article_link do %>
+  <%= content_tag :h1, article_link.title %>
+  <%= link_to article_link.url %><br><br>
+
+    <div class='likes'>
+    <span class='total-likes'><%= article_link.likes.count %></span> favorites
+    </div>
+ 
+  <%= form_for Like.new, :remote => true do |f| %>
+    <%= link_to "mode_edit", edit_article_link_path(article_link), class: 'edit-button material-icons' -%>
+    <%= f.hidden_field :likeable_type, :value => article_link.class %>
+    <%= f.hidden_field :likeable_id, :value => article_link.id %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.submit "favorite".html_safe, class:'like-button material-icons' %>
+    <%= link_to "delete", article_link_path(article_link), class: 'delete-button material-icons', :method => :delete %>
+
+  <% end %>
+<% end %>
+<% end %>
